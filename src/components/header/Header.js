@@ -1,20 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import AppBar from '@material-ui/core/AppBar';
+import { Toolbar, IconButton, Typography, Button } from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
 
 const Header = () => (
-    <header>
-        <nav>
-            <ul>
-                <li><Link to='/'>My Vinyl</Link></li>
-                <li><Link to='/login'>Login</Link></li>
-                <li><Link to='/records'>Records</Link></li>
-                <li><Link to='/record/123'>Record</Link></li>
-                <li><Link to='/users'>Users</Link></li>
-                <li><Link to='/user/jimmyd'>User</Link></li>
-                <li><Link to='/register'>Register</Link></li>
-            </ul>
-        </nav>
-    </header>
+    <AppBar position="sticky">
+        <Toolbar>
+            <IconButton color="inherit" aria-label="Menu">
+                <MenuIcon />
+            </IconButton>
+            <Typography variant="title" color="inherit">
+                My Vinyl
+            </Typography>
+        </Toolbar>
+    </AppBar>
 )
 
 export default Header
