@@ -1,13 +1,9 @@
 import React, {Component} from 'react';
 
-class Record extends Component
-{
-    render()
-    {
-        return (
-            <p>Record works!</p>
-        )
-    }
-}
+const Record = (props) => {
+    return (
+        <p>Record works for record: {props.match.params.id}</p>
+    )
+};
 
 export default Record

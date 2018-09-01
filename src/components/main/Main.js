@@ -14,9 +14,9 @@ const Main = () => (
             <Route exact path='/' component={MyVinyl}/>
             <Route exact path='/login' component={Login}/>
             <Route exact path='/records' component={Records}/>
-            <Route exact path='/record' component={Record}/>
+            <Route exact path='/record/:id' component={Record}/>
             <Route exact path='/users' component={Users}/>
-            <Route exact path='/user' component={User}/>
+            <Route exact path='/user/:username' component={User}/>
             <Route exact path='/register' component={Register}/>
         </Switch>
     </main>

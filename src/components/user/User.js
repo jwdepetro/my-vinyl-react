@@ -1,13 +1,9 @@
 import React, {Component} from 'react';
 
-class User extends Component
-{
-    render()
-    {
-        return (
-            <p>User works!</p>
-        )
-    }
-}
+const User = (props) => {
+    return (
+        <p>User works for username: {props.match.params.username}!</p>
+    )
+};
 
 export default User
