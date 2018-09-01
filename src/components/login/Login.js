@@ -31,42 +31,14 @@ class Login extends Component
 
     handleChange = name => event => this.setState({[name]: event.target.value});
 
-    styles = theme => ({
-        layout: {
-            width: 'auto',
-            display: 'block', // Fix IE11 issue.
-            marginLeft: theme.spacing.unit * 3,
-            marginRight: theme.spacing.unit * 3,
-            [theme.breakpoints.up(400 + theme.spacing.unit * 3 * 2)]: {
-            width: 400,
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            },
-        },
-        paper: {
-            marginTop: theme.spacing.unit * 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            padding: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 3}px ${theme.spacing.unit * 3}px`,
-        },
-        form: {
-            width: '100%', // Fix IE11 issue.
-            marginTop: theme.spacing.unit,
-        },
-        submit: {
-            marginTop: theme.spacing.unit * 3,
-        }
-    });
-
     render() 
     {
         return (
             <React.Fragment>
                 <CssBaseline />
-                <main className={this.styles.layout}>
-                    <Paper className={this.styles.paper}>
-                        <form className={this.styles.form} onSubmit={(e) => this.login(e)}>
+                <main>
+                    <Paper>
+                        <form onSubmit={(e) => this.login(e)}>
                             <FormControl margin="normal" required fullWidth>
                                 <InputLabel htmlFor="username">Username</InputLabel>
                                 <Input 
@@ -88,8 +60,7 @@ class Login extends Component
                                 type="submit"
                                 fullWidth
                                 variant="raised"
-                                color="primary"
-                                className={this.styles.submit}>
+                                color="primary">
                                 Login
                             </Button>
                         </form>
