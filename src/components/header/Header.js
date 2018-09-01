@@ -5,6 +5,7 @@ const Header = () => (
     <header>
         <nav>
             <ul>
+                <li><Link to='/'>My Vinyl</Link></li>
                 <li><Link to='/login'>Login</Link></li>
                 <li><Link to='/records'>Records</Link></li>
                 <li><Link to='/record'>Record</Link></li>

@@ -6,10 +6,12 @@ import User from '../user/User'
 import Records from '../records/Records'
 import Register from '../register/Register';
 import Record from '../record/Record';
+import MyVinyl from '../my-vinyl/MyVinyl';
 
 const Main = () => (
     <main>
         <Switch>
+            <Route exact path='/' component={MyVinyl}/>
             <Route exact path='/login' component={Login}/>
             <Route exact path='/records' component={Records}/>
             <Route exact path='/record' component={Record}/>
