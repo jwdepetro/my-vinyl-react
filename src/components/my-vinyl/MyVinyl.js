@@ -4,6 +4,7 @@ import Axios from 'axios';
 class MyVinyl extends Component {
     constructor(props) {
         super(props);
+        this.state = { data: { items: [] } }
 
         const uri = 'http://localhost:5000/api/records';
         const options = {
@@ -14,13 +15,18 @@ class MyVinyl extends Component {
 
         Axios
             .get(uri, options)
-            .then(r => console.log('response', r))
+            .then(r => this.setState({ data: r.data }))
             .catch(e => console.log('error', e));
     }
 
     render() {
         return (
-            <p>My Vinyl works!</p>
+            <div>
+                <p>My Vinyl works!</p>
+                <ul>
+                    {this.state.data.items.map(i => <li key={i.id}>{i.artist} - {i.album}</li>)}
+                </ul>
+            </div>
         )
     }
 }
