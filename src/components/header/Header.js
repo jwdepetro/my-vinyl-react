@@ -1,7 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
-import { Toolbar, IconButton, Typography, withStyles, Divider, List, Hidden, Drawer, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
+import { Toolbar, IconButton, Typography, Drawer, ListItem, ListItemText } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Link } from 'react-router-dom'
 

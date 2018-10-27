@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
-import axios from 'axios';
 import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import { Card, CardContent } from '@material-ui/core';
+import Axios from 'axios';
 
 class Login extends Component {
 
@@ -20,10 +20,10 @@ class Login extends Component {
             auth: { username: this.state.username, password: this.state.password }
         };
 
-        axios
+        Axios
             .post(uri, null, options)
             .then((r) => {
-                localStorage.setItem('token', r.data.token); 
+                localStorage.setItem('token', r.data.token);
                 this.props.history.push('/')
             })
             .catch((e) => console.log('error', e));
