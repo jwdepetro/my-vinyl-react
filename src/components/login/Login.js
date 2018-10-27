@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles, Button, CssBaseline, Paper, Avatar, Typography, FormControl, Input, InputLabel } from '@material-ui/core';
 import LockIcon from '@material-ui/icons/LockOutlined';
 import Axios from 'axios';
+import Link from 'react-router-dom/Link';
 
 const styles = theme => ({
     layout: {
@@ -34,6 +35,9 @@ const styles = theme => ({
     submit: {
         marginTop: theme.spacing.unit * 3,
     },
+    register: {
+        marginTop: theme.spacing.unit * 3,
+    }
 });
 
 class Login extends Component {
@@ -101,6 +105,9 @@ class Login extends Component {
                                 Login
                             </Button>
                         </form>
+                        <Typography className={classes.register}>
+                            New User? <Link to="/register">Register Here</Link>
+                        </Typography>
                     </Paper>
                 </main>
             </React.Fragment>
